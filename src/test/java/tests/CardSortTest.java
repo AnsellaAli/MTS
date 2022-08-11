@@ -7,7 +7,7 @@ import pages.HomePage;
 
 public class CardSortTest extends BaseTest {
 
-    @Test
+    @Test(timeout = 5000)
     @DisplayName("Проверка сортировки дебетовой карты")
     public void checkingSortDebitCard() {
         HomePage homePage = new HomePage();
