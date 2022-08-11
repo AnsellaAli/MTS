@@ -7,7 +7,7 @@ import pages.HomePage;
 
 public class CardSortTest extends BaseTest {
 
-    @Test(timeout = 5000)
+  /*  @Test(timeout = 5000)
     @DisplayName("Проверка сортировки дебетовой карты")
     public void checkingSortDebitCard() {
         HomePage homePage = new HomePage();
@@ -16,10 +16,10 @@ public class CardSortTest extends BaseTest {
 
         CardPage cardPage = new CardPage();
         cardPage.selectTab("Дебетовые")
-                .checkNamesCardsContainsText("ДЕБЕТОВАЯ");
+                .checkNamesCardsContainsText("ДЕБЕТОВАЯ");*/
     }
 
- /*   @Test
+    @Test
     @DisplayName("Проверка сортировки виртуальной карты")
     public void checkingSortVirtualCard() {
         HomePage homePage = new HomePage();
@@ -31,7 +31,7 @@ public class CardSortTest extends BaseTest {
                 .checkNamesCardsContainsText("ВИРТУАЛЬНАЯ");
     }
 
-    @Test
+   /* @Test
     @DisplayName("Проверка сортировки кредитной карты")
     public void checkingSortCreditCard() {
         HomePage homePage = new HomePage();
