@@ -8,7 +8,7 @@ import pages.OnlineBankPage;
 public class OnlineBankPageTest extends BaseTest {
 
     @Test
-    @DisplayName("")
+    @DisplayName("Проверка перехода между формами при верно введённом телефоне")
     public void checkingTheTransitionBetweenForms() {
         HomePage homepage = new HomePage();
         homepage.openPage()
@@ -21,7 +21,7 @@ public class OnlineBankPageTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("Проверка сообщения при неверно введённом телефоне")
     public void checkingErrorPhone() {
         HomePage homepage = new HomePage();
         homepage.openPage()
@@ -34,7 +34,7 @@ public class OnlineBankPageTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("Проверка очищения поля ввода номера")
     public void checkingDeletePhone() {
         HomePage homepage = new HomePage();
         homepage.openPage()
