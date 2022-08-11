@@ -14,39 +14,40 @@ public class PaymentAndTransfers {
     public final By  ERROR_MESSAGE_TEXT = By.cssSelector(".Wrapper-sc-1vydk7-0.eWunGH");
     public final By  DELETE_SEARCH_INPUT = By.cssSelector("[data-testid=\"icon_baseX24/ic-close-1\"]");
 
-    @Step("")
-    public PaymentAndTransfers clickSearchInput(){
+     @Step("Нажатие на поле поиска")
+    public PaymentAndTransfers clickSearchInput() {
         $(SEARCH_INPUT).shouldBe(Condition.visible).click();
         return this;
     }
 
-    @Step("")
-    public PaymentAndTransfers enteringValues(String searchName){
+    @Step("Ввод данных в поле поиска")
+    public PaymentAndTransfers enteringValues(String searchName) {
         $(SEARCH_INPUT).sendKeys(searchName);
         return this;
     }
 
-    @Step("")
-    public PaymentAndTransfers checkSearchList(){
+    @Step("Проверка соответсвие данных запросу")
+    public PaymentAndTransfers checkSearchList() {
         String searchName = $(SEARCH_INPUT).getValue();
         clickSearchInput();
-        for (int i=0;i< $$(SEARCH_LIST).size(); i++){
+        for (int i = 0; i < $$(SEARCH_LIST).size(); i++) {
             String card = $$(SEARCH_LIST).get(i).getText();
             card.equals(searchName);
         }
         return this;
     }
 
-    @Step("")
-    public PaymentAndTransfers checkErrorText(){
+    @Step("Проверка сообщения при некоректных данных")
+    public PaymentAndTransfers checkErrorText() {
         $(ERROR_MESSAGE_TEXT).getText().equals("Ничего не найдено");
         return this;
     }
 
-    @Step("")
-    public PaymentAndTransfers deleteSearch(){
+    @Step("Проверка очистки поля поиска")
+    public PaymentAndTransfers deleteSearch() {
         $(DELETE_SEARCH_INPUT).click();
         $(SEARCH_INPUT).getValue().equals("");
         return this;
     }
+
 }
