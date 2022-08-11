@@ -20,6 +20,8 @@ public class HomePage {
     private final By TEXT_ERRORS_PASSPORT = By.cssSelector(".styled__FieldWrapper-wwecny-1.eOZCer:last-child .Wrapper-sc-1vydk7-0.OlnRe.HelperText-sc-jsokzo-0.hByJHf");
     private final By SMS_CODE = By.cssSelector("[data-testid=\"confirmationField\"] [class=\"Wrapper-sc-1vydk7-0 BfQtf\"]");
     private final By ONLINE_BANK_PAGE = By.cssSelector("[href=\"https://payment.mts.ru/Auth/SignIn/\"]");
+    private final By OPEN_MORE = By.cssSelector(".styled__MoreButton-sc-he1x93-2.fTfJnT");
+    private final By GO_TO_PAYMENT_AND_TRANSFERS = By.cssSelector(".LinkWrapper-sc-a7l7fm-0.ktbVkT:last-child .Wrapper-sc-1vydk7-0.kKRlHI");
 
 
     @Step("Открыть домашнюю страницу")
@@ -75,6 +77,13 @@ public class HomePage {
     @Step("")
     public HomePage clickToOnlineBank(){
         $(ONLINE_BANK_PAGE).shouldBe(Condition.visible, Duration.ofSeconds(20)).click();
+        return this;
+    }
+
+    @Step("vff")
+    public HomePage clickGoToPaymentAndTransfersPage(){
+        $(OPEN_MORE).shouldBe(Condition.visible).click();
+        $(GO_TO_PAYMENT_AND_TRANSFERS).shouldBe(Condition.visible).click();
         return this;
     }
 
