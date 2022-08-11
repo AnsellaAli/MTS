@@ -15,32 +15,32 @@ public class OnlineBankPage {
     private final By ERROR_TEXT = By.cssSelector("[data-testid=\"error\"]");
 
 
-    @Step("")
+   @Step("Нажать на форму для ввода номера")
     public OnlineBankPage clickPhoneInput() {
         $(PHONE_INPUT).click();
         return this;
     }
 
-    @Step("")
+    @Step("Нажать на кнопку далее")
     public OnlineBankPage clickContinueButton() {
         $(CONTINUE_BUTTON).click();
         return this;
     }
 
-    @Step("")
+    @Step("Проверка удаления содержимого в поле номер")
     public OnlineBankPage clickDeletePhone() {
         $(DELETE_PHONE).click();
         $(PHONE_INPUT).getValue().equals("+7");
         return this;
     }
 
-    @Step("Ввод дан в поле номер")
+    @Step("Ввод данных в поле номер")
     public OnlineBankPage enteringValues(String phone) {
         $(PHONE_INPUT).sendKeys(phone);
         return this;
     }
 
-    @Step("")
+    @Step("Проверка перехода на форму с полностью введённым номером")
     public OnlineBankPage checkSwitchingWithGoodPhone() {
         String phone = $(PHONE_INPUT).getValue();
         String[] phoneSize = phone.split("");
@@ -51,7 +51,7 @@ public class OnlineBankPage {
         return this;
     }
 
-    @Step("")
+    @Step("Проверка текста ошибки при с неправильно введённым номером")
     public OnlineBankPage checkError() {
         String phone = $(PHONE_INPUT).getValue();
         String[] phoneSize = phone.split("");
