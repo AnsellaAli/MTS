@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class OnlineBankPage {
 
-    private final By PHONE_INPUT = By.cssSelector("[inputmode=\"tel\"]");
+    private final By PHONE_INPUT = By.cssSelector("[name='phone']");
     private final By CONTINUE_BUTTON = By.cssSelector("[class=\"sc-bdfBwQ joyPHQ\"]");
     private final By DELETE_PHONE = By.cssSelector("[class=\"Svg-sc-1cvehoj-1 gEwQyG\"]");
     private final By SWITCHING_TO_THE_NEXT_FORM = By.cssSelector("[class=\"sc-kEjbxe jbJDWL\"]");
