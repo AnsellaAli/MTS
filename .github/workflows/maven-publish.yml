@@ -1,0 +1,28 @@
+name: Run test 
+
+env:
+  OS: ubuntu-latest
+  
+on: push
+
+jobs:
+  install_dependency_and_run_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Скачиваем селенойд"
+        run: curl -s https://aerokube.com/cm/bash  | bash
+        
+      - name: "Даем права на запуск селенойда"
+        run: chmod +x ./cm
+        
+      - name: "Запускаем selenoid"
+        run: ./cm selenoid start --vnc
+        
+      - name: "Запускаем selenoid-ui"
+        run: ./cm selenoid-ui start
+        
+      - name: "Используем main репозиторий"
+        uses: actions/checkout@v1
+        
+      - name: "Запускаем тесты"
+        run: mvn clean test
