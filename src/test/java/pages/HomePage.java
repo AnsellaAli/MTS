@@ -23,6 +23,8 @@ public class HomePage {
     private final By OPEN_MORE = By.cssSelector(".styled__MoreButton-sc-he1x93-2.fTfJnT");
     private final By GO_TO_PAYMENT_AND_TRANSFERS = By.cssSelector(".LinkWrapper-sc-a7l7fm-0.ktbVkT:last-child .Wrapper-sc-1vydk7-0.kKRlHI");
 
+    private final By GO_TO_CURRENCY_CONTROL = By.cssSelector("[href=\"/malomu-biznesu/investicionnie-uslugi/currency-control/\"]");
+
 
     @Step("Открыть домашнюю страницу")
     public HomePage openPage() {
@@ -87,4 +89,11 @@ public class HomePage {
         return this;
     }
 
+
+    @Step("")
+    public HomePage clickGoToCurrencyControl(){
+        $(GO_TO_CURRENCY_CONTROL).click();
+        return this;
+    }
 }
+
