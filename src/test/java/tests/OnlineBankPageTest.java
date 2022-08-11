@@ -16,7 +16,7 @@ public class OnlineBankPageTest extends BaseTest {
 
         OnlineBankPage onlineBankPage = new OnlineBankPage();
         onlineBankPage.clickPhoneInput()
-                .enteringValues("9999999998")
+                .enteringValues("9899999998")
                 .checkSwitchingWithGoodPhone();
     }
 
@@ -29,7 +29,7 @@ public class OnlineBankPageTest extends BaseTest {
 
         OnlineBankPage onlineBankPage = new OnlineBankPage();
         onlineBankPage.clickPhoneInput()
-                .enteringValues("999999")
+                .enteringValues("989999")
                 .checkError();
     }
 
@@ -42,7 +42,7 @@ public class OnlineBankPageTest extends BaseTest {
 
         OnlineBankPage onlineBankPage = new OnlineBankPage();
         onlineBankPage.clickPhoneInput()
-                .enteringValues("9898998888")
+                .enteringValues("9898098888")
                 .clickDeletePhone();
     }
 }
