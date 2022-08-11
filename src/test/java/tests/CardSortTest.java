@@ -19,7 +19,7 @@ public class CardSortTest extends BaseTest {
                 .checkNamesCardsContainsText("ДЕБЕТОВАЯ");
     }
 
-    @Test
+ /*   @Test
     @DisplayName("Проверка сортировки виртуальной карты")
     public void checkingSortVirtualCard() {
         HomePage homePage = new HomePage();
@@ -41,7 +41,7 @@ public class CardSortTest extends BaseTest {
         CardPage cardPage = new CardPage();
         cardPage.selectTab("Кредитные")
                 .checkNamesCardsContainsText("КРЕДИТНАЯ");
-    }
+    }*/
 
 
 }
