@@ -63,7 +63,7 @@ public class HomePage {
         return this;
     }
 
-    @Step("Ввод дан в поле номер и паспорт")
+    @Step("Ввод данных в поле номер и паспорт")
     public HomePage enteringValues(String phone, String passport) {
         $(PHONE_INPUT).sendKeys(phone);
         $(PASSPORT_INPUT).sendKeys(passport);
@@ -76,22 +76,23 @@ public class HomePage {
         return this;
     }
 
-    @Step("")
-    public HomePage clickToOnlineBank(){
+
+    @Step("Проверка перехода на страницу онлайн банка")
+    public HomePage clickToOnlineBank() {
         $(ONLINE_BANK_PAGE).shouldBe(Condition.visible, Duration.ofSeconds(20)).click();
         return this;
     }
 
-    @Step("vff")
-    public HomePage clickGoToPaymentAndTransfersPage(){
+    @Step("Проверка перехода на страницу платежи и переводы")
+    public HomePage clickGoToPaymentAndTransfersPage() {
         $(OPEN_MORE).shouldBe(Condition.visible).click();
         $(GO_TO_PAYMENT_AND_TRANSFERS).shouldBe(Condition.visible).click();
         return this;
     }
 
 
-    @Step("")
-    public HomePage clickGoToCurrencyControl(){
+    @Step("Проверка перехода на страницу валютного контроля для малого бизнеса")
+    public HomePage clickGoToCurrencyControl() {
         $(GO_TO_CURRENCY_CONTROL).click();
         return this;
     }
