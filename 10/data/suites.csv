@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Aug 11 13:02:07 GMT 2022","Thu Aug 11 13:02:26 GMT 2022","18424","","tests.OnlineBankPageTest","","tests.OnlineBankPageTest","checkingTheTransitionBetweenForms","",""
+"passed","Thu Aug 11 13:03:14 GMT 2022","Thu Aug 11 13:03:23 GMT 2022","9142","","tests.PersonalOfferTest","","tests.PersonalOfferTest","checkingInputsValidation","Проверка правильности отображения сообщения с ошибкой при незаполненных данных",""
+"passed","Thu Aug 11 13:02:51 GMT 2022","Thu Aug 11 13:03:04 GMT 2022","13142","","tests.CardSortTest","","tests.CardSortTest","checkingSortVirtualCard","Проверка сортировки виртуальной карты",""
+"passed","Thu Aug 11 13:03:04 GMT 2022","Thu Aug 11 13:03:14 GMT 2022","9353","","tests.PersonalOfferTest","","tests.PersonalOfferTest","checkingTransitionForm","Проверка перехода на ввод кода из смс",""
+"passed","Thu Aug 11 13:02:26 GMT 2022","Thu Aug 11 13:02:38 GMT 2022","12427","","tests.OnlineBankPageTest","","tests.OnlineBankPageTest","checkingErrorPhone","",""
+"passed","Thu Aug 11 13:02:38 GMT 2022","Thu Aug 11 13:02:51 GMT 2022","12631","","tests.OnlineBankPageTest","","tests.OnlineBankPageTest","checkingDeletePhone","",""
