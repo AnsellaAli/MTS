@@ -14,19 +14,19 @@ public class ApplicationForOpeningCurrentAccount {
     private final By OPEN_CITY_LIST = By.cssSelector(".nice-select.bid__form-input.inputselect.settlement-input .current");
     private final By OPEN_OFFICE_LIST = By.cssSelector(".nice-select.bid__form-input.inputselect.ofis-input.open .option");
 
-    @Step("")
+    @Step("Открытие вложенного списка городов")
     public ApplicationForOpeningCurrentAccount clickCityInput(){
         $(OPEN_CITY_LIST).click();
         return this;
     }
 
-    @Step("")
+    @Step("Проверка соответствия имени формы")
     public ApplicationForOpeningCurrentAccount checkNameForm(){
         $(NAME_FORM).getText().equals("Заявка на открытие расчетного счета");
         return this;
     }
 
-    @Step("")
+    @Step("Проверка соответсвия города и офиса")
     public ApplicationForOpeningCurrentAccount sortCityAndOffice(){
         for(int i=1; i<$$(CITY_LIST).size(); i++){
            String s = $$(CITY_LIST).get(i).getText();
