@@ -8,7 +8,7 @@ import pages.PaymentAndTransfers;
 public class PaymentsAndTransfersTest extends BaseTest{
 
     @Test
-    @DisplayName("")
+    @DisplayName("Проверка соответсвия запроса в поиске и ответа при верном паметре поиска")
     public void checkSearchSort(){
         HomePage homePage = new HomePage();
         homePage.openPage()
@@ -21,7 +21,7 @@ public class PaymentsAndTransfersTest extends BaseTest{
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("Проверка сообщения при неверном паметре поиска")
     public void checkErrorText(){
         HomePage homePage = new HomePage();
         homePage.openPage()
@@ -34,7 +34,7 @@ public class PaymentsAndTransfersTest extends BaseTest{
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("Проверка очищения поиска")
     public void checkDeleteInput(){
         HomePage homePage = new HomePage();
         homePage.openPage()
